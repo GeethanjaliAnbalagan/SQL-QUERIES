@@ -1,0 +1,22 @@
+<%@ page import ="java.sql.*" %>
+<% 
+String name=request.getParameter("namef");
+String mobileNo=request.getParameter("mobileNo");
+String email=request.getParameter("email");
+String passwords=request.getParameter("passwords");
+
+try{
+	Class.forName("com.mysql.jdbc.Driver");
+	java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/emplid","root","root123");
+	Statement st= con.createStatement();
+	st.executeUpdate("insert into users (namef,mobileNo,email,passwords) values('"+namef+"','"+mobileNo+"','"+email+"','"+passwords+"')");
+	response.sendRedirect("save.html");
+	
+}
+catch(Exception e)
+{
+	response.sendRedirect("error.html");	
+}
+
+
+%>

@@ -1,0 +1,18 @@
+<form  action="index.jsp" method="post">
+<fieldset>
+<label for="fname">Name:</label>
+<input type="text" name="namef"><br>
+
+<label for="fname">mobile number</label>
+<input type="number" name="mobileno"><br>
+
+<label for="fname">email</label>
+<input type="email" name="email"><br>
+
+<label for="fname">password</label>
+<input type="password" name="password"><br>
+
+<input type="submit" value="submit">
+
+</fieldset>
+</form>
